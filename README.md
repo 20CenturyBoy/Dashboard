@@ -1,1 +1,2 @@
 # Dashboard
+The goal of current project is to showcase ability to use CSS (with emphasis on showcasing ability to use Grid module) to develop more complex layouts such as dashboards as part of website.
