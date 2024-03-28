@@ -10,14 +10,23 @@ html,body{
     width: 100vw;
     margin:0px;
     padding:0px;
+    font-family: "Roboto";
+    color:white;
+    font-weight: bold;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    background-color: black;
 }
 
 div{
-    border: solid black 3px;
+    border: none;
 }
 
 #main-container{
-    width:100%;
+    width:80%;
     height:100%;
     margin:0px;
     padding:0px;
@@ -25,10 +34,67 @@ div{
     grid-template-columns: 1fr 4fr;
 }
 
+#sidebar{
+    background-color:#3b82f6;
+}
+
+#sidebar-header{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap:50px;
+    align-items: center;
+    border:none;
+    margin-bottom: 125px;
+    padding-left:50px;
+}
+
+#sidebar-header-image{
+    height: 170px;
+}
+
+#sidebar-heading{
+    font-size:80px;
+}
+
+#first-sidebar-container{
+    margin-bottom: 150px;
+}
+
+li{
+    display:grid;
+    grid-template-columns: 0.9fr 5fr;
+    grid-template-rows: 150px;
+    gap:80px;
+}
+
+.icon{
+    height: 70px;
+}
+
+.icon{
+    filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(338deg) brightness(102%) contrast(105%);
+    justify-self: right;
+    
+}
+
+.icon-text{
+    font-size: 60px;
+    border: none;
+}
+
+
 .sidebar-container{
-    display:grid
+    display:grid;
+    list-style:none;
 }
 
 .sidebar-container.first{
     margin-bottom: 100px;
 }
+
+#main-body{
+    background-color: white;
+}
+
+
+
