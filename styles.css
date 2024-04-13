@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    --blue:#3b82f6;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -46,7 +47,7 @@ h2{
 }
 
 #sidebar{
-    background-color:#3b82f6;
+    background-color:var(--blue);
 }
 
 #sidebar-header{
@@ -138,7 +139,7 @@ li{
     border-radius: 100px;
 }
 
-#top-profile-picture{
+.mini-profile-picture{
     height:150px;
     border-radius: 50%;
 }
@@ -189,7 +190,7 @@ li{
 
 .option{
     height:100px;
-    background-color:#3b82f6;
+    background-color:var(--blue);
     border-radius: 100px;
     width:300px;
     height:115px;
@@ -204,39 +205,40 @@ li{
     display:grid;
     grid-template-columns: 3fr 1.2fr;
     gap:60px;
-    padding: 95px 100px 130px;
+    padding: 75px 100px 130px;
+    color:black;
 }
 
-#main-content>div{
-    border: 3px black solid;
-}
 
 #cards-container{
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
+.header{
+    font-size:60px;
+}
+
 #cards-header{
     margin: 0;
     margin-bottom: 10px;
     padding: 0;
-    font-size:60px;
     font-weight: bold;
     color: black;
 }
 
 #cards{
     max-height: 100%;
+    height:80%;
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30% 30% 30%;
-    gap:75px;
-    padding-top: 20px;;
+    gap:108px;
+    padding-top: 5px;
 }
 
 .card{
     display: grid;
-    grid-template-rows: 1fr 1.2fr;
+    grid-template-rows: 1fr 0.8fr;
     padding:100px 30px;
     padding-left: 57px;
     font-size:50px;
@@ -265,13 +267,83 @@ li{
     display:grid;
     grid-template-rows: 1fr 1fr;
     row-gap: 100px;
-    padding:80px 30px;
+    padding:0px 30px 0px;
 }
 
-#cards>div,#side-content>div,.card>div{
+#cards>div,#announcments-content{
     border: 3px black solid;
 }
 
+#announcments{
+    display:flex;
+    flex-direction: column;
+}
+
+#announcments-header{
+    margin-bottom: 20px;
+}
+
+.announcment{
+    padding:40px 0px;
+}
+
+.announcment:not(:nth-child(3)){
+    border-bottom: black solid 1px;
+}
+
+#announcments-content{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    padding:65px 94px 0px;
+}
+
+.announcment-header{
+    font-size: 50px;
+}
+
+.announcment-text{
+    font-size:35px;
+}
+
+#trending{
+    display:flex;
+    flex-direction: column;
+    font-size:40px;
+}
+
+#trending-header{
+    margin-bottom:20px;
+}
+
+#trending-content{
+    border:3px solid black;
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    gap:80px;
+    padding:40px 50px;
+}
+
+.side-profile-names{
+    font-weight: bold;
+    font-size:40px;
+}
+
+.project-name{
+    font-size:40px;
+    font-weight: 400;
+}
+
+.currently-trending-project{
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.trending-project-text{
+    margin-left:40px;
+    align-self:center;
+}
 
 
 
